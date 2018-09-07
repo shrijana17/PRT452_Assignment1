@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 1</title>
+    <link rel="shortcut icon" type="image/png" href="test/lib/jasmine-3.2.1/jasmine_favicon.png">
+    <link rel="stylesheet" type="text/css" href="test/lib/jasmine-3.2.1/jasmine.css">
+</head>
+<script>
+    function submitForm(){
+        event.preventDefault();
+        console.log("submitted: ")
+        //document main process
+        mainProcess();
+
+    }
+</script>
+<body style="width: 100%; text-align: center">
+<form id="myForm" action="#" onsubmit="event.preventDefault(); submitForm()">
+
+    <label  for="point1">x1</label>
+    <input id="point1x" type="text" name="point1" />
+
+    <label for="point2">y1</label>
+    <input id="point1y" type="text" name="point2" />
+
+    <label for="point3">x2</label>
+    <input id="point2x" type="text" name="point3" />
+
+    <label for="point4">y2</label>
+    <input id="point2y" type="text" name="point4" />
+
+    <button type="submit">Submit</button>
+    <div style="margin: 2em;">Equation of the Line is: </div>
+    <div id="result" style="margin: 2em; color: #ff0000;"></div>
+    <div style="margin: 2em;">Distance of the line is: </div>
+    <div style="margin: 2em; color: green" id="distance"></div>
+</form ">
+</body>
+<script src="jquery.min.js"></script>
+<script src="process.js"></script>
+
+<script type="text/javascript" src="test/lib/jasmine-3.2.1/jasmine.js"></script>
+<script type="text/javascript" src="test/lib/jasmine-3.2.1/jasmine-html.js"></script>
+<script type="text/javascript" src="test/lib/jasmine-3.2.1/boot.js"></script>
+</html>
